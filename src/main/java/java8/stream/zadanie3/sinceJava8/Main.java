@@ -25,5 +25,9 @@ public class Main
         }
 
         //TODO: use one of Optional<T> methods to get rid of if(isPresent) else check
+
+        dict.translate("девушка")
+                .ifPresentOrElse((n) -> System.out.println(dict.translate("девушка").get()),
+                        () -> System.out.println("there's no such a word in the spanish langauge, sorry"));
     }
 }
